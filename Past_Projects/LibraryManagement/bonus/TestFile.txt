@@ -1,0 +1,48 @@
+Arlington Public Library
+6
+publication
+To Kill a Mockingbird
+Harper Lee
+1960
+checkedin
+publication
+The Great Gatsby
+F. Scott Fitzgerald
+1925
+checkedout
+Leo Gam
+lag3241@mavs.uta.edu
+2023-10-21
+publication
+Fahrenheit 451
+Ray Bradbury
+1953
+checkedin
+video
+Star Wars Episode I
+George Lucas
+1999
+checkedin
+136
+video
+Interstellar
+Christopher Nolan
+2014
+checkedout
+Leo Gam
+lag3241@mavs.uta.edu
+2023-10-21
+169
+video
+Talk to Me
+Danny Philippou
+2022
+checkedin
+95
+3
+Rudy Orozco
+rjo4902@mavs.uta.edu
+Alex Lee
+anl2948@mavs.uta.edu
+Leo Gam
+lag3241@mavs.uta.edu

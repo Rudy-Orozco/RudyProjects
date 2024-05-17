@@ -1,0 +1,2 @@
+/* Rudy Orozco 1001864902 */
+char *PhraseBank[] = {"Never Gonna Give You Up", "Hakuna Matata!", "I Am Your Father...", "Long Live The King", "Get To The Choppa!", "Clever Girl.", ""};

@@ -1,0 +1,8 @@
+AMC The Parks At Arlington 18|76015|file1.txt|10x9
+AMC Dine-In Clearfork 8|76109|file2.txt|8x5
+AMC EastChase 9|76120|file13.txt|10x10
+AMC Palace 9|76102|myfile.it|5x4
+Studio Movie Grill|76011|cat.dog|4x10
+Movie Tavern at Green Oaks|76017|abc.def|6x7
+Studio Movie Grill Arlington|76018|xxxx.zzz|7x4
+Rave|76053|Hurst.tx|10x10

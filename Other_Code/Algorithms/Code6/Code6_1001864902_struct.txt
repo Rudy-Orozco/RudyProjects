@@ -1,0 +1,9 @@
+typedef struct PersonStats
+{
+    char *Name;
+    float HeightInM;
+    char FavColor;
+    int Age;
+    struct PersonStats *next_ptr;
+}
+PERSONSTATS;
