@@ -1,0 +1,151 @@
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  float: left;
+  justify-content: center;
+}
+.block {
+  width: 200px;
+}
+.btn-group button {
+  background-color: PaleTurquoise ; /* Green background #04AA6D */
+  border: 1px solid LightCyan; 
+  color: Navy;
+ 
+  width: 16px;
+  padding: 2px 2px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+//  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: Magenta;
+  background-color: #3e8e41;
+}
+.button {
+  background-color: #04AA6D; /* Green */
+  border: 3px brown;
+  color: white;
+  padding: 15px 32px;
+  align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {background-color: #008CBA; display: inline-block;  } /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555;} /* Black */
+
+textarea {
+  resize: none;
+  background-color:#e7e7e7;
+  width:10;height:15;
+}
+
+iframe {
+  background-color:powderblue;
+  frameBorder: 0;
+  scrolling: auto;
+  width: 140px;
+  height: 200px;  
+  margin: 50px;
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100%; /* Make sure the container has a height */
+}
+
+.scrollable-table {
+  width: fit-content;
+  height: 600px;
+  overflow-y: auto;
+  border: 1px solid rgba(253, 252, 252, 0.917);
+  border-collapse: collapse;
+  margin-right: px;
+}
+
+table.center {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: Navy;
+  color: white;
+  text-align: center;
+}
+tr {
+  background-color: Salmon;
+  color: white;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background-color: Olive;
+}
+
+#mb-gamechat { /* mb for message board */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px; /* Adjust width as necessary */
+  margin-top: 10px;
+}
+
+#mb-messages {
+  height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]#mb-messageInput {
+  width: 100%; /* Full width of the container */
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+button#mb-sendButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #254e26; /* Green */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button#mb-sendButton:hover {
+  background-color: #011e03;
+}
+
+.chat-message {
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  background-color: #f4f4f8;
+  border-radius: 8px;
+}
+
+
+

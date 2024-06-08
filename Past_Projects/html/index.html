@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Game</title>
+</head>
+<body>
+
+<audio id="myAudio">
+  <source src="score.mp3" type="audio/mp3">
+</audio>
+
+<div id="page1" style="display:block;">
+  <center><h1 style="color:Navy;background-color:GreenYellow;display:block;">THE WORD SEARCH GAME</h1>
+  <button class="button button4" onclick="NewPlayer()">New Player</button>
+  <button class="button button4" onclick="ReturnPlayer()">Returning Player</button></center>
+</div>
+<div id="page2" style="display:none;">
+  <center>
+  <h1 style="color:Navy;background-color:GreenYellow;display:block;">THE WORD SEARCH GAME</h1>
+  <button class="button" onclick="">New Player</button>
+  <button class="button button4" onclick="ReturnPlayer()">Returning Player</button>
+  <h3>Welcome new player! Enter a unique player name.</h3>
+  <input id="name"></input><br>
+  <label id="p2errMsg" style="color:red;height:auto;display:none;"></label><br/><br/>
+  <h3 id="p2Msg" style="">Enter a four digit PIN to be able to return as your unique<br/>player name to this server later.</h3>
+  <input id="pin" style="" maxlength="4" size="4"></input><br>
+  <h4 id="p2Msg2" style="">Choose a game type.</h4>
+  <button id="p2bt3" class="button" onclick="SelectPlayer('p2bt3')">2-Player</button>
+  <button id="p2bt4" class="button button4" onclick="SelectPlayer('p2bt4')">3-Player</button>
+  <button id="p2bt5" class="button button4" onclick="SelectPlayer('p2bt5')">4-Player</button><br/>
+  <button id="p2bt6" class="button button2" onclick="FindGame(1)">Find Game</button><br>
+  <label id="p2errMsg2" style="color:red;height:auto;"></label>
+  </center>
+</div>
+<div id="page3" style="display:none;">
+<center>
+  <h1 style="color:Navy;background-color:GreenYellow;display:block;">THE WORD SEARCH GAME</h1>
+  <button class="button button4" onclick="NewPlayer()">New Player</button>
+  <button class="button" onclick="">Returning Player</button>
+  <h3>Welcome back! Enter your player name and PIN.</h3>
+  <label for="name2">Name</label>
+  <input id="name2"></input><br>
+  <label id="p3errMsg" style="color:red;height:auto;display:none;"></label><br/><br/>
+  <label for="pin2">PIN</label>
+  <input id="pin2" style="" maxlength="4" size="4"></input><br>
+  <h4 id="p3Msg" style="">Choose a game type.</h4>
+  <button id="p3bt3" class="button" onclick="SelectPlayer('p3bt3')">2-Player</button>
+  <button id="p3bt4" class="button button4" onclick="SelectPlayer('p3bt4')">3-Player</button>
+  <button id="p3bt5" class="button button4" onclick="SelectPlayer('p3bt5')">4-Player</button><br/>
+  <button id="p3bt6" class="button button2" onclick="FindGame2(1)">Find Game</button><br>
+  <label id="p3errMsg2" style="color:red;height:auto;"></label>
+  </center>
+</div>
+<div id="page4" style="display:none;">
+  <center><h1 style="color:Navy;background-color:GreenYellow;display:block;">GAME LOBBY</h1>
+  <h3 id="p4Msg" style="">Waiting for Players to Join, Please wait a moment!</h3><br/>
+  <div class="row">
+      <h4 class="block" id="p4h4">You Are:</h4>
+      <h4 class="block" id="p4h4_2">Game Type:</h4>
+      <h4 class="block" id="p4h4_3">Active games:</h4>
+  </div>
+  <br><br>
+  <table id="p4table">
+  <tr >
+    <th colspan="2">Players Waiting</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Game Type</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  </table>
+  <br/>
+  <h3 id="p4Msg2" style="">Server Leaderboards</h3><br/>
+  <div class="row" style="">
+  <table id="p4table2">
+  <tr >
+    <th colspan="2">Games Won Leaderboard</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Games Won</th>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  </table>
+  <table id="p4table3">
+  <tr >
+    <th colspan="2">Points Leaderboard</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Points Earned</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  </table>
+    </div>
+  <!-- <button class="button button2" onclick="GameRoom()">Game Room</button> -->
+  </center>
+</div>
+<div id="page5"  style="display:none;">
+  <center><h1 style="color:Navy;background-color:GreenYellow;display:block;">THE WORD SEARCH GAME</h1></center>
+  <div class="row">
+    <div class="" style="width:20%;float:left;">
+      <p>GAME TIME LEFT:</p>
+      <center><h1 id="p5h1">10:00</h1></center>
+    </div>
+    <div class="" style="width:20%;float:left;">
+      <h3 id="p5Msg" style="">Game Leaderboards</h3><br/>
+  <table>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Point Earned</th>
+  </tr>
+
+  <tr>
+    <td>1   </td>
+    <td id="p5pone">////</td>
+    <td id="p5poneP">0</td>
+  </tr>
+  <tr>
+    <td>2   </td>
+    <td id="p5ptwo">////</td>
+    <td id="p5ptwoP">0</td>
+  </tr>
+  <tr>
+    <td>3   </td>
+    <td id="p5pthre">////</td>
+    <td id="p5pthreP">0</td>
+  </tr>
+  <tr>
+    <td>4   </td>
+    <td id="p5pfour">////</td>
+    <td id="p5pfourP">0</td>
+  </tr>
+
+</table>
+      <h4 id="p5p">You are: Laura</h4>
+    </div>
+    <div class="" style="width:40%;float:left;">
+  <h3 id="p4Msg3" style="">Server Leaderboards</h3><br/>
+  <div class="row" style="">
+  <table>
+  <tr >
+    <th colspan="2">Games Won Leaderboard</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Games Won</th>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+
+  </table>
+  <table>
+  <tr >
+    <th colspan="2">Points Leaderboar</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Points Earned</th>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+
+  </table>
+  </div>
+    </div>
+    <div class="" style="width:20%;float:left;">
+      <h4>Word Density: </h4>
+      <h4>Word Orientation variance: <em></em></h4>
+      <h4>Filler letter variance: <em></em></h4>
+      <h4 id="p5h4_7">Words Left: <em></em></h4><br/>
+    </div>
+  </div>
+  <div class="row">
+    <div id="mb-gamechat" style="width: 300px; height: 450px; overflow: auto; border: 1px solid #ccc; padding: 10px; margin-top: 18px;">
+      <center><p>GAME CHAT</p></center>
+      <div id="mb-messages">
+          <!-- Messages will be dynamically inserted here -->
+      </div>
+      <input type="text" id="mb-messageInput" aria-label="Type your message here" placeholder="Type your message here..." style="width: 100%; box-sizing: border-box; padding: 8px;">
+      <button id="mb-sendButton" onclick="sendChatMessage()">Send Message</button>
+    </div>
+    <div class="btn-group" style="width:75%;float:left; margin: 50px" id="board"></div>
+    <div style="width:20%;float:center;" id="wordbank">
+      <center>
+<!--         <p>WORD BANK</p>  -->
+<!--         <br/><iframe id="p5iframe" title="Word Bank" allowfullscreen="true"></iframe><br><br>  -->       
+<!--         <button class="button button2" onclick="Winner()">Winners</button>  -->
+<!--         <button class="button button2" onclick="Loser()">Losers</button><br><br> -->
+         <button class="button button3" onclick="ResetBoard()">Reset Board</button><br><br>
+         <div class="scrollable-table">
+          <table id="p5table4" class="center">
+              <thead>
+                  <tr>
+                      <th colspan="2">WORD BANK</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Word rows will be added here -->
+              </tbody>
+          </table>
+         </div>
+      </center>
+   </div>
+  </div>
+</div>
+<div id="page6" style="display:none;">
+  <center>  
+
+  <table>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Point Earned</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+  <h1>You win</h1>
+
+    <label id="p6lbl">Player # of wins/loses</label><br/>
+  <h4 id="p6Msg">Select Game Type for new game.</h4>
+  <button id="p6bt3" class="button" onclick="SelectPlayer('p6bt3')">2-Player</button>
+  <button id="p6bt4" class="button button4" onclick="SelectPlayer('p6bt4')">3-Player</button>
+  <button id="p6bt5" class="button button4" onclick="SelectPlayer('p6bt5')">4-Player</button><br/>
+  <button id="p6bt6" class="button button2" onclick="FindGame(0)">Find Game</button><br>
+  <label id="errMsg2" style="color:red;height:auto;"></label>
+
+  </center>
+</div>
+<div id="page7" style="display:none;">
+  <center>
+  <table>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Point Earned</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+  <h1>You lose</h1>
+    <label id="p7lbl">Player # of wins/loses</label><br/>
+  <h4 id="p7Msg" style="">Select Game Type for new game.</h4>
+  <button id="p7bt3" class="button" onclick="SelectPlayer('p7bt3')">2-Player</button>
+  <button id="p7bt4" class="button button4" onclick="SelectPlayer('p7bt4')">3-Player</button>
+  <button id="p7bt5" class="button button4" onclick="SelectPlayer('p7bt5')">4-Player</button><br/>
+  <button id="p7bt6" class="button button2" onclick="FindGame(0)">Find Game</button><br>
+  <label id="errMsg2" style="color:red;height:auto;"></label>
+  </center>
+</div>
+</body>
+<script src = "WordSearchGame.js"></script>
+</html>
