@@ -1,0 +1,11 @@
+prefix=/home/yunhao/arty/freedom-tools/obj/x86_64-linux-ubuntu14/install/riscv-qemu-5.2.0-2020.12.0-preview1-x86_64-linux-ubuntu14
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${exec_prefix}/lib/../lib
+includedir=${libdir}/libffi-3.2.1/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.2.1
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

@@ -1,0 +1,59 @@
+defs.h
+    define the function 
+    int hello(void);
+
+syscall.h
+    define the name and set it as the next call number
+    #define SYS_hello 22
+
+syscall.c 
+    add the extern prototype to the function
+    extern uint64 sys_hello(void)
+
+    add the system handler
+    [SYS_hello]   sys_hello,
+
+sysproc.c
+    create the function
+    uint64
+    sys_hello(void)
+    {
+        return hello();
+    }
+
+makefile
+    add to the UPROGS ($U/_hello\)
+
+hello.c
+    the aplication
+
+    #include "kernel/types.h"
+    #include "kernel/stat.h"
+    #include "user/user.h"
+
+    int main(int argc, char * argv[])
+    {
+        hello();
+        return 0;
+    }
+
+user.h
+    add the program to the system call
+    int hello(void);
+
+usys.pl
+    add an entry
+    entry("hello");
+
+proc.h is where the task struct is
+
+proc.c is where the scheduler is
+    in scheduler, most of the work is gonna be done here. [Line 455 to 470]
+    change the for loop to where it chooses the winning ticket
+
+
+PROGRESS NOTES:
+03/26 - Started on setColor, need to implement
+    ask how to implement and assign in office hours.
+
+    ask how to 

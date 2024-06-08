@@ -1,0 +1,9 @@
+prefix='/home/yunhao/arty/freedom-tools/obj/x86_64-linux-ubuntu14/install/riscv-qemu-5.2.0-2020.12.0-preview1-x86_64-linux-ubuntu14'
+exec_prefix="${prefix}"
+datarootdir="${prefix}/share"
+datadir="${datarootdir}"
+docdir="${datarootdir}/doc/gettext"
+ACLOCALDIR="${datadir}/aclocal"
+GETTEXTSRCDIR="${datarootdir}/gettext"
+GETTEXTSRCPODIR="${datarootdir}/gettext/po"
+EXAMPLESCONFIGDIR="${datarootdir}/doc/gettext/examples/config"
