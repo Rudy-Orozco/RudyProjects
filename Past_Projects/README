@@ -1,3 +1,8 @@
+8PuzzleSolver
+    -Demonstrates simple AI algorithms to solve the classic 8 Puzzle using various methods
+    -Uses BFS, DFS, A*, Greedy, and DFS algorithims
+    -Uses Python
+
 Airline_Database
     -Demonstrates a simple database creating queries, adding items to tables, updating, etc.
     -Uses Java, MySQL, JDBC, & MySQL Server
@@ -17,3 +22,15 @@ LibraryManagement: Part of the Algorithmns folder
 MovieTheater: Part of the Intermediate_Prog Folder
     -Uses intermediate level programming
     -C language
+
+Operating_Sys Projects:
+    -All use C and are built upon an existing Xv6 Operating System
+        > Unix Shell
+            Demonstrates a simple Unix shell created with C and allows basic functionality
+            such as ls, cd, and other system clals
+        > Malloc
+            Uses different memory allocation methods to demonstrate the strengths and weaknesses
+            of each algorithm. Uses First, Next, Best, and Worst Fit algorithms.
+        > Xv6 Encryption
+            Created a system call within the Xv6 Operating System to be able to encrypt a
+            file using XOR operations on each byte. Directly edits each file on the disk.
