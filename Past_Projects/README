@@ -1,3 +1,7 @@
+Airline_Database
+    -Demonstrates a simple database creating queries, adding items to tables, updating, etc.
+    -Uses Java, MySQL, JDBC, & MySQL Server
+
 CWG: Group Project 
     -Uses Object Oriented and SDLC Concepts
     -Java, JavaScript, HTML language
