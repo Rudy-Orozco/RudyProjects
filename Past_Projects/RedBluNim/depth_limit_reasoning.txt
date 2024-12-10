@@ -1,0 +1,9 @@
+My implementation for making an eval function for the depth limit is as follows:
+
+val = abs(#_blue_marbles - #_red_marbles)
+
+Reason I think this implementaion works is that this ensures that the amount of marbles per each turn stays balance
+as at a certain point near the end of the game, the computer performs certain moves at a specific time. For example
+when the marbles either marbles reach 3, the computer will always choose the other pile until both marble piles are 3,
+to then it decides the next best optimal move consistantly. This way, when using dpeth limited search, it will always
+balance out the total marbles to each other.
